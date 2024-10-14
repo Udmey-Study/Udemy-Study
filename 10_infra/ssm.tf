@@ -17,8 +17,8 @@ resource "aws_ssm_parameter" "port" {
 resource "aws_ssm_parameter" "database" {
   name  = "/${var.project}/${var.environment}/app/MYSQL_DATABASE"
   type  = "String"
-  value = aws_db_instance.mysql_standalone.name
-  # value = "tastylog"
+  value = "tastylog"
+  # value = aws_db_instance.mysql_standalone.db_name
 }
 
 resource "aws_ssm_parameter" "username" {
